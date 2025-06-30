@@ -1,0 +1,76 @@
+/* Estilo general del body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+/* Estilo del botón principal para crear tarjetas */
+#botonCrear {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+#botonCrear:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor de tarjetas */
+#contenedor_tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+/* Cada tarjeta */
+.tarjeta {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Título de la tarjeta */
+.tituloTarjeta {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Botones dentro de la tarjeta */
+.tarjeta button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.tarjeta button:hover {
+  background-color: #5a6268;
+}
+
+/* Estilo especial para botón "Aceptar" */
+.tarjeta button:contains("Aceptar") {
+  background-color: #28a745;
+}
+.imagenTarjeta {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 4px;
+}
