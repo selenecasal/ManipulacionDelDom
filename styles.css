@@ -1,76 +1,120 @@
 /* Estilo general del body */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
   padding: 20px;
+  color: #333;
 }
 
-/* Estilo del botón principal para crear tarjetas */
+/* Título principal centrado */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #5f27cd;
+  margin-bottom: 40px;
+}
+
+/* Botón principal para crear tarjetas */
 #botonCrear {
   font-size: 24px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: none;
-  background-color: #007bff;
+  background-color: #6c5ce7;
   color: white;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: background-color 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+  display: block;
+  margin: 0 auto;
 }
 
 #botonCrear:hover {
-  background-color: #0056b3;
+  background-color: #a29bfe;
+  transform: scale(1.1);
 }
 
 /* Contenedor de tarjetas */
 #contenedor_tarjetas {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
-  gap: 15px;
+  margin-top: 30px;
+  gap: 20px;
+  justify-content: center;
 }
 
-/* Cada tarjeta */
+/* Estilo base de cada tarjeta */
 .tarjeta {
-  background-color: white;
+  padding: 16px;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s ease;
   border: 1px solid #ddd;
-  padding: 15px;
-  width: 200px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: relative;
+  color: #333;
 }
 
-/* Título de la tarjeta */
-.tituloTarjeta {
-  font-weight: bold;
-  margin-bottom: 10px;
+.tarjeta:hover {
+  transform: translateY(-4px);
+}
+
+/* Colores vivos y suaves para tarjetas */
+.color1 { background-color: #ffeaa7; } /* Amarillo pastel */
+.color2 { background-color: #fab1a0; } /* Coral claro */
+.color3 { background-color: #81ecec; } /* Celeste claro */
+.color4 { background-color: #a29bfe; } /* Lila */
+.color5 { background-color: #fdcb6e; } /* Naranja claro */
+.color6 { background-color: #55efc4; } /* Verde menta */
+
+/* Título dentro de la tarjeta */
+.tituloTarjeta, .tarjeta h3 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #2d3436;
+  margin-bottom: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Imagen dentro de la tarjeta */
+.imagenTarjeta,
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 /* Botones dentro de la tarjeta */
 .tarjeta button {
-  background-color: #6c757d;
+  background-color: #74b9ff;
   color: white;
   border: none;
-  padding: 6px 10px;
+  padding: 8px 12px;
+  margin-top: 8px;
   margin-right: 5px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s;
 }
 
 .tarjeta button:hover {
-  background-color: #5a6268;
+  background-color: #0984e3;
 }
 
-/* Estilo especial para botón "Aceptar" */
-.tarjeta button:contains("Aceptar") {
-  background-color: #28a745;
+/* Botón "Aceptar" (modo edición) */
+.tarjeta .modoAceptar {
+  background-color: #00b894 !important;
+  color: white;
 }
-.imagenTarjeta {
-  max-width: 100%;
-  margin-top: 10px;
-  border-radius: 4px;
+
+.tarjeta .modoAceptar:hover {
+  background-color: #019875 !important;
 }
